@@ -1,25 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JumpTheLine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSq-H3-Tzj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="fbY-SG-Rmh"/>
+                                </constraints>
+                                <state key="normal" title="Choose A City">
+                                    <color key="titleColor" red="0.88257575759999995" green="0.078245823980000004" blue="0.098729069249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRP-zl-NtY"/>
+                                </connections>
+                            </button>
+                            <pickerView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFD-1f-15d">
+                                <rect key="frame" x="0.0" y="90" width="414" height="200"/>
+                                <color key="tintColor" red="0.88257575759999995" green="0.078245823980000004" blue="0.098729069249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="NDJ-Jy-qag"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="x0Q-XY-CXd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Eca-M6-1W3"/>
+                                </connections>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GfR-lk-S2i">
+                                <rect key="frame" x="0.0" y="90" width="414" height="646"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="COG-ZM-PWg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OSE-2z-uoL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GfR-lk-S2i" secondAttribute="trailing" id="08D-L9-xzZ"/>
+                            <constraint firstItem="HSq-H3-Tzj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5vT-rW-2OU"/>
+                            <constraint firstItem="QFD-1f-15d" firstAttribute="top" secondItem="HSq-H3-Tzj" secondAttribute="bottom" id="8CC-Vg-Cez"/>
+                            <constraint firstItem="GfR-lk-S2i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ikt-aK-AHf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GfR-lk-S2i" secondAttribute="bottom" id="RAg-Qt-Zt2"/>
+                            <constraint firstAttribute="trailing" secondItem="HSq-H3-Tzj" secondAttribute="trailing" id="Rgo-Oo-mXx"/>
+                            <constraint firstItem="QFD-1f-15d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SI8-QJ-2vU"/>
+                            <constraint firstAttribute="trailing" secondItem="QFD-1f-15d" secondAttribute="trailing" id="Sp0-5j-1Pq"/>
+                            <constraint firstItem="HSq-H3-Tzj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZEP-Do-1Sm"/>
+                            <constraint firstItem="GfR-lk-S2i" firstAttribute="top" secondItem="HSq-H3-Tzj" secondAttribute="bottom" id="mzo-Ls-pDH"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CWl-y0-RQi" appends="YES" id="FpW-Ah-gzn"/>
+                        </connections>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="chooseCityButton" destination="HSq-H3-Tzj" id="A2D-kZ-h29"/>
+                        <outlet property="cityPicker" destination="QFD-1f-15d" id="H9y-aC-Xr0"/>
+                        <outlet property="pickerHeightConstraint" destination="NDJ-Jy-qag" id="ema-rs-xRe"/>
+                        <outlet property="pickerOffsetConstraint" destination="8CC-Vg-Cez" id="MVP-eR-mHK"/>
+                        <outlet property="tableViewGestureRecognizer" destination="CWl-y0-RQi" id="0JI-Qx-JTm"/>
+                        <outlet property="venuesTableView" destination="GfR-lk-S2i" id="CJY-sg-gV0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CWl-y0-RQi">
+                    <connections>
+                        <action selector="hidePicker" destination="BYZ-38-t0r" id="d3e-CC-A4n"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="140" y="152"/>
         </scene>
     </scenes>
 </document>

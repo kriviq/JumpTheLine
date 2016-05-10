@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Edinburgh</key>
+	<array>
+		<string>The Liquid Room</string>
+		<string>Cabaret Voltaire</string>
+		<string>The Citrus Club</string>
+		<string>The Bongo Club</string>
+		<string>Sneaky Pete&apos;s</string>
+		<string>Why not</string>
+		<string>Opal Lounge</string>
+		<string>The Voodoo Rooms</string>
+	</array>
+	<key>Paris</key>
+	<array>
+		<string> Louvre</string>
+		<string>Pompidou</string>
+		<string>D&apos;Orsay</string>
+		<string>Cite des Sciences</string>
+		<string>Arc de Triomphe</string>
+		<string>Grand Palais - Versaille</string>
+		<string>Army Museum</string>
+	</array>
+	<key>cities</key>
+	<array>
+		<string>Edinburgh</string>
+		<string>Paris</string>
+	</array>
+</dict>
+</plist>

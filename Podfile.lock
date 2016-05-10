@@ -1,0 +1,13 @@
+PODS:
+  - ObjectMapper (1.2.0)
+  - QuadratTouch (1.1.1)
+
+DEPENDENCIES:
+  - ObjectMapper (~> 1.2)
+  - QuadratTouch
+
+SPEC CHECKSUMS:
+  ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
+  QuadratTouch: 296d83c63a4328f6f40af9fc728fe24f0e3b00d4
+
+COCOAPODS: 0.39.0
